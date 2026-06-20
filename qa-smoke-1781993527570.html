@@ -9,19 +9,19 @@
     .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
     h1 { margin: 0 0 1rem; font-size: 1.5rem; }
     .counter { font-size: 2rem; font-weight: bold; margin: 1rem 0; }
-    button { padding: 0.5rem 1.5rem; font-size: 1rem; border: none; border-radius: 8px; background: #4f46e5; color: white; cursor: pointer; }
-    button:hover { background: #4338ca; }
+    button { padding: 0.5rem 1.5rem; font-size: 1rem; border: none; border-radius: 8px; background: #0066cc; color: white; cursor: pointer; }
+    button:hover { background: #0052a3; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>QA Smoke 1781993527570</h1>
     <div class="counter" id="counter">0</div>
-    <button id="btn">Click me</button>
+    <button id="incrementBtn">Click to increment</button>
   </div>
   <script>
     let count = 0;
-    document.getElementById('btn').addEventListener('click', function() {
+    document.getElementById('incrementBtn').addEventListener('click', function() {
       count++;
       document.getElementById('counter').textContent = count;
     });
