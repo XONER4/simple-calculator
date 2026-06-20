@@ -8,13 +8,6 @@
 <body>
   <h1>QA Smoke 1781993527570</h1>
   <p>Counter: <span id="counter">0</span></p>
-  <button id="increment">Click me</button>
-  <script>
-    let count = 0;
-    document.getElementById('increment').addEventListener('click', function() {
-      count++;
-      document.getElementById('counter').textContent = count;
-    });
-  </script>
+  <button onclick="document.getElementById('counter').textContent = +document.getElementById('counter').textContent + 1">Click me</button>
 </body>
 </html>
