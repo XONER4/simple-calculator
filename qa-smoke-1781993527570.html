@@ -7,24 +7,17 @@
   <style>
     body { font-family: system-ui, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #f5f5f5; }
     .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-    h1 { margin: 0 0 1rem; font-size: 1.5rem; color: #222; }
-    .counter { font-size: 2rem; font-weight: bold; margin: 1rem 0; color: #0a66c2; }
-    button { padding: 0.6rem 1.5rem; font-size: 1rem; border: none; border-radius: 8px; background: #0a66c2; color: white; cursor: pointer; }
-    button:hover { background: #084a8a; }
+    h1 { margin-top: 0; }
+    button { font-size: 1.2rem; padding: 0.5rem 1.5rem; border: none; border-radius: 8px; background: #4f46e5; color: white; cursor: pointer; }
+    button:hover { background: #4338ca; }
+    p { font-size: 1.5rem; font-weight: bold; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>QA Smoke 1781993527570</h1>
-    <div class="counter" id="counter">0</div>
-    <button id="incrementBtn">Click to increment</button>
+    <p id="counter">0</p>
+    <button onclick="document.getElementById('counter').textContent = parseInt(document.getElementById('counter').textContent) + 1">Click me</button>
   </div>
-  <script>
-    let count = 0;
-    document.getElementById('incrementBtn').addEventListener('click', function() {
-      count++;
-      document.getElementById('counter').textContent = count;
-    });
-  </script>
 </body>
 </html>
